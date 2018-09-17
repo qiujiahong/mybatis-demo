@@ -19,7 +19,8 @@ public class Application1 {
             //写
             Blog blog1 = new Blog("李四111");
             mapper.add(blog1);
-            //关闭链接
+            mapper.update(new Blog(101,"王五","www.baidu.com"));
+            //提交
             session.commit();
 
         } finally {
