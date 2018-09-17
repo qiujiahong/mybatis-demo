@@ -15,4 +15,8 @@ public interface BlogMapper1 {
     @Update("update blog set name=#{name},url=#{url} where id=#{id}")
     void update(Blog blog);
 
+    @Delete("delete from blog where id=#{id}")
+    @Options(useGeneratedKeys = true)
+    Long deleteById(Long id);
+
 }
